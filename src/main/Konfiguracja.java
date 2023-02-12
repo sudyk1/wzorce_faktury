@@ -24,7 +24,7 @@ public class Konfiguracja {
 
     public IObliczCenePoRabacie getBiezacyRabat() {
 
-        return new ObliczCenePoRabacieKwotowym();
-//        return new ObliczCenePoRabacieProcentowym();
+//        return new ObliczCenePoRabacieKwotowym();
+        return new ObliczCenePoRabacieProcentowym();
     }
 }
