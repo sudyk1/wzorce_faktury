@@ -1,5 +1,6 @@
 package main;
 
+import rabaty.AdapterRabatuLosowegoObiektowy;
 import rabaty.IObliczCenePoRabacie;
 import rabaty.ObliczCenePoRabacieKwotowym;
 import rabaty.ObliczCenePoRabacieProcentowym;
@@ -25,6 +26,7 @@ public class Konfiguracja {
     public IObliczCenePoRabacie getBiezacyRabat() {
 
 //        return new ObliczCenePoRabacieKwotowym();
-        return new ObliczCenePoRabacieProcentowym();
+//        return new ObliczCenePoRabacieProcentowym();
+        return new AdapterRabatuLosowegoObiektowy();
     }
 }

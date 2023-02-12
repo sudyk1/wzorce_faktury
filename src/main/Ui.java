@@ -1,19 +1,14 @@
 package main;
 
-import java.util.Iterator;
 import java.util.Calendar;
 import magazyn.Towar;
 
 import dokumenty.Faktura;
-import dokumenty.Pozycja;
 
 import druk.Druk;
 
 //ZEWNETRZNY RABAT
 import rabatlosowy.LosowyRabat;
-import rabaty.ObliczCenePoRabacieKwotowym;
-import rabaty.ObliczCenePoRabacieProcentowym;
-
 
 public class Ui {
 
