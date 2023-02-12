@@ -1,6 +1,10 @@
 package main;
 
 import java.util.Calendar;
+
+import kategoria.Kategoria;
+import kategoria.KategoriaProsta;
+import kategoria.KategoriaZlozona;
 import magazyn.Towar;
 
 import dokumenty.Faktura;
@@ -29,5 +33,26 @@ public class Ui {
 		//TEST ZEWN. rabatu
 		LosowyRabat lr=new LosowyRabat();
 		System.out.println(lr.losujRabat());
+
+		KategoriaZlozona kz1 = new KategoriaZlozona();
+		KategoriaProsta k1 = new KategoriaProsta("bestseller");
+		KategoriaProsta k2 = new KategoriaProsta("dla dzieci");
+
+		KategoriaZlozona kz2 = new KategoriaZlozona();
+		KategoriaProsta kol1 = new KategoriaProsta("zielony");
+		KategoriaProsta kol2 = new KategoriaProsta("czerwony");
+
+		kz2.dodajKategorie(kol1);
+		kz2.dodajKategorie(kol2);
+
+		kz1.dodajKategorie(k1);
+		kz1.dodajKategorie(k2);
+		kz1.dodajKategorie(kz2);
+
+		kz1.wypiszNazwe();
+
+
+
+
 	}
 }
