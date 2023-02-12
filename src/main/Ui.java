@@ -34,11 +34,11 @@ public class Ui {
 		LosowyRabat lr=new LosowyRabat();
 		System.out.println(lr.losujRabat());
 
-		KategoriaZlozona kz1 = new KategoriaZlozona();
+		KategoriaZlozona kz1 = new KategoriaZlozona("Ksiazki");
 		KategoriaProsta k1 = new KategoriaProsta("bestseller");
 		KategoriaProsta k2 = new KategoriaProsta("dla dzieci");
 
-		KategoriaZlozona kz2 = new KategoriaZlozona();
+		KategoriaZlozona kz2 = new KategoriaZlozona("Kolory");
 		KategoriaProsta kol1 = new KategoriaProsta("zielony");
 		KategoriaProsta kol2 = new KategoriaProsta("czerwony");
 
