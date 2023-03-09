@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Date;
 
+import druk.DrukujFakture;
 import magazyn.Towar;
 import main.Konfiguracja;
 import rabaty.IObliczCenePoRabacie;
@@ -17,8 +18,9 @@ public class Faktura {
 	IObliczCenePoRabacie liczarkaRabatu;
 	Konfiguracja k = Konfiguracja.getInstance();
 
-	public Faktura(Date dataSprzedazy,String kontrahent)
-	{
+	DrukujFakture df = k.getSposobDruku();
+
+	public Faktura(Date dataSprzedazy,String kontrahent) {
 		this.dataSprzedazy=dataSprzedazy;
 		this.kontrahent=kontrahent;
 		pozycje=new ArrayList<Pozycja>();
@@ -30,8 +32,7 @@ public class Faktura {
 //		this.liczarkaRabatu = lr;
 //	}
 
-	public void dodajPozycje(Towar towar, double ilosc)
-	{
+	public void dodajPozycje(Towar towar, double ilosc) {
 		pozycje.add(new Pozycja(towar,ilosc));
 		this.przeliczSume();
 	}
@@ -46,13 +47,11 @@ public class Faktura {
 	}
 
 	//jak sie zmieni cos na fakturze to trzeba wywolac te metode
-	private void przeliczSume()
-	{
+	private void przeliczSume() {
 		Iterator<Pozycja> iteratorPozycji=pozycje.iterator();
 		Pozycja pozycja;
 		suma=0;
-		while(iteratorPozycji.hasNext())
-		{
+		while(iteratorPozycji.hasNext()) {
 			pozycja = iteratorPozycji.next();
 			suma+=pozycja.getWartosc();
 		}
@@ -66,6 +65,9 @@ public class Faktura {
 	{
 		return this.kontrahent;
 	}
-	
-	
+
+	public void wypiszFakture() {
+		df.wypiszFakture(this);
+	}
+
 }

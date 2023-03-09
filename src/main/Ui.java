@@ -2,6 +2,7 @@ package main;
 
 import java.util.Calendar;
 
+import druk.DrukujFakture;
 import kategoria.Kategoria;
 import kategoria.KategoriaProsta;
 import kategoria.KategoriaZlozona;
@@ -27,9 +28,10 @@ public class Ui {
 		Faktura f=new Faktura(teraz.getTime(),"Fido");
 		f.dodajPozycje(t1,3);
 		f.dodajPozycje(t2, 5);
-		
-		Druk.wypiszFakture(f);
-		
+
+		f.wypiszFakture();
+
+
 		//TEST ZEWN. rabatu
 		LosowyRabat lr=new LosowyRabat();
 		System.out.println(lr.losujRabat());
