@@ -38,23 +38,32 @@ public class Ui {
 
 		KategoriaZlozona kz1 = new KategoriaZlozona("Ksiazki");
 		KategoriaProsta k1 = new KategoriaProsta("bestseller");
+		Towar t3 = new Towar(10.0, "bestseller1");
+		Towar t4 = new Towar(12.0, "bestseller2");
 		KategoriaProsta k2 = new KategoriaProsta("dla dzieci");
+		Towar t5 = new Towar(15.0, "dladzieci1");
 
 		KategoriaZlozona kz2 = new KategoriaZlozona("Kolory");
 		KategoriaProsta kol1 = new KategoriaProsta("zielony");
+		Towar t6 = new Towar(14 ,"zielony lisc");
 		KategoriaProsta kol2 = new KategoriaProsta("czerwony");
-
-		kz2.dodajKategorie(kol1);
-		kz2.dodajKategorie(kol2);
+		Towar t7 = new Towar(24 ,"czerwony lisc");
 
 		kz1.dodajKategorie(k1);
 		kz1.dodajKategorie(k2);
 		kz1.dodajKategorie(kz2);
 
+		k1.dodajTowar(t3);
+		k1.dodajTowar(t4);
+
+		k2.dodajTowar(t5);
+		kz2.dodajKategorie(kol1);
+		kz2.dodajKategorie(kol2);
+
+		kol1.dodajTowar(t6);
+		kol2.dodajTowar(t7);
+
 		kz1.wypiszNazwe();
-
-
-
 
 	}
 }

@@ -28,4 +28,10 @@ public class Towar {
 	{
 		this.nazwa=nazwa;
 	}
+
+	@Override
+	public String toString() {
+		return "Towar: " + nazwa  +
+				", cena: " + cena;
+	}
 }
